@@ -8,6 +8,8 @@ from ibm_watsonx_ai.foundation_models.schema import TextChatParameters
 # Setup credentials
 credentials = Credentials(
     url="https://us-south.ml.cloud.ibm.com",
+    api_key=os.getenv("IBM_API_KEY") // dont share the api key here 
+
     # api_key = "<YOUR_API_KEY>"  # Normally you'd put an API key here
 )
 client = APIClient(credentials)
